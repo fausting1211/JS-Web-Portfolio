@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETMall 商品快搜</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-cart-shopping"></i> ETMall 商品快搜</h1>
+
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <input type="text" id="keywordInput" placeholder="請輸入商品關鍵字...">
+                    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i> 搜尋</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="toolbar">
+            <div id="controlsBar" class="controls-bar hidden">
+                <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> 排序方式：</label>
+                <select id="sortSelect">
+                    <option value="default">預設相關度排序</option>
+                    <option value="asc">價格：低 → 高</option>
+                    <option value="desc">價格：高 → 低</option>
+                </select>
+            </div>
+        </div>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>商品資訊蒐集中，請稍候...</p>
+        </div>
+
+        <div id="resultArea" class="product-grid"></div>
+
+        <div id="noData" class="hidden">
+            <i class="fa-regular fa-face-frown-open"></i>
+            <p>找不到相關商品。</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

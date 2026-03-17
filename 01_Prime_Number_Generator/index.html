@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>質數產生器</title>
+    <link id="themeStylesheet" rel="stylesheet" href="css/light.css">
+</head>
+
+<body>
+
+    <!-- 夜/日模式按鈕：固定右上 -->
+    <button id="themeToggleBtn" class="theme-btn">🌙</button>
+
+    <div class="container">
+
+        <h1>質數產生器</h1>
+        <p class="desc">設定數字範圍，產生範圍內質數</p>
+
+        <div class="flex input-row">
+
+            <div class="input-block">
+                <label>起始值</label>
+                <input id="startRange" type="range" min="0" max="100" value="0">
+                <input id="startNum" type="number" min="0" max="100" value="0">
+            </div>
+
+            <div class="input-block">
+                <label>結束值</label>
+                <input id="endRange" type="range" min="0" max="100" value="100">
+                <input id="endNum" type="number" min="0" max="100" value="100">
+            </div>
+
+        </div>
+
+        <!-- 錯誤訊息顯示區 -->
+        <div id="rangeError" class="error-text"></div>
+
+        <div class="flex btn-row">
+            <button id="generateBtn" class="btn-primary">✨生成質數</button>
+            <button id="clearBtn" class="btn-secondary">🧹清除結果</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">質數總數<br><span id="primeCount">0</span></div>
+            <div class="stat-card">範圍起點<br><span id="rangeStart">0</span></div>
+            <div class="stat-card">範圍終點<br><span id="rangeEnd">0</span></div>
+        </div>
+
+        <h2>發現的質數 (<span id="countLabel">0</span> 個)</h2>
+
+        <div id="primeList" class="prime-grid"></div>
+
+        <!-- 錯誤訊息顯示區 -->
+        <div id="resultError" class="error-result-text"></div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
