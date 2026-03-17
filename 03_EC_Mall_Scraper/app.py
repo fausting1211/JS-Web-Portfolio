@@ -28,7 +28,7 @@ def get_driver():
     )
 
 
-def scrape_etmall_data(keyword):
+def scrape_data(keyword):
     driver = get_driver()
     all_results = []
 
@@ -140,7 +140,7 @@ def api_search():
     if not keyword:
         return jsonify({"status": "error", "message": "請輸入關鍵字"})
 
-    results = scrape_etmall_data(keyword)
+    results = scrape_data(keyword)
 
     if results is None:
         return jsonify({"status": "empty", "data": []})

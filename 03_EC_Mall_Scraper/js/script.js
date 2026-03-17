@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error:', error);
                 loadingDiv.classList.add('hidden');
                 searchBtn.disabled = false;
-                alert("搜尋發生錯誤，請確認後端 etmall.py 是否已執行。");
+                alert("搜尋發生錯誤，請確認後端 app.py 是否已執行。");
             });
     }
 
